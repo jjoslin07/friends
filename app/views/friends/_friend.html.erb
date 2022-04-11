@@ -1,27 +1,19 @@
-<div id="<%= dom_id friend %>">
-  <p>
-    <strong>First name:</strong>
-    <%= friend.first_name %>
-  </p>
-
-  <p>
-    <strong>Last name:</strong>
-    <%= friend.last_name %>
-  </p>
-
-  <p>
-    <strong>Email:</strong>
-    <%= friend.email %>
-  </p>
-
-  <p>
-    <strong>Phone:</strong>
-    <%= friend.phone %>
-  </p>
-
-  <p>
-    <strong>Twitter:</strong>
-    <%= friend.twitter %>
-  </p>
-
+<div class="card m-2" style="width: 18rem;" id="<%= dom_id friend %>">
+  <div class="card-body d-flex flex-column justify-content-evenly">
+    <h5 class="card-title"> 
+    <%= friend.first_name %>     <%= friend.last_name %>
+</h5>
+    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quasi impedit magni tenetur consequatur tempora!.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">   <strong><i class="bi bi-envelope"></i></strong>
+    <%= friend.email %></li>
+    <li class="list-group-item">    <strong><i class="bi bi-telephone"></i></strong>
+    <%= friend.phone %></li>
+    <li class="list-group-item">    <strong><i class="bi bi-twitter"></i></strong>
+    <%= friend.twitter %></li>
+  </ul>
+  <div class="card-body">
+    <%= link_to "Show", friend, class: "btn btn-primary"%>
+  </div>
 </div>

@@ -4,7 +4,7 @@
 
 <br>
 
-<div>
-  <%= link_to "Show this friend", @friend %> |
-  <%= link_to "Back to friends", friends_path %>
+<div class="d-flex gap-2">
+  <%= link_to "Show", @friend, class: "btn btn-primary" %> 
+  <%= link_to "Friends", friends_path, class: "btn btn-info" %>
 </div>

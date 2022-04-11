@@ -1,14 +1,9 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Friends</h1>
 
-<div id="friends">
+<div id="friends" class="container d-flex justify-content-start flex-wrap">
   <% @friends.each do |friend| %>
     <%= render friend %>
-    <p>
-      <%= link_to "Show this friend", friend %>
-    </p>
   <% end %>
 </div>
-
-<%= link_to "New friend", new_friend_path %>
+<%= link_to "Add friend", new_friend_path, class: "btn btn-secondary ms-4 mt-4" %>
